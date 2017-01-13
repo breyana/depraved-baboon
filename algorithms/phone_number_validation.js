@@ -10,4 +10,4 @@ var regex = /^(1\s?)?[\s\-]?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
 
 telephoneCheck("1-155-555-5555");
 
-// module.exports(telephoneCheck); be able to export and reuse in the file
+module.exports = {telephoneCheck};
