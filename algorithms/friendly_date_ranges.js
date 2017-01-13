@@ -111,4 +111,4 @@ function makeFriendlyDates(arr) {
 
 }
 
-makeFriendlyDates(["2017-03-01", "2017-05-05"]);
+module.exports = {makeFriendlyDates};
