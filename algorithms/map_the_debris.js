@@ -15,16 +15,16 @@ The radius of the earth is 6367.4447 kilometers, and the GM value of earth is
 
 */
 
-function orbitalPeriod(arr) {
-  var GM = 398600.4418;
-  var earthRadius = 6367.4447;
-  var constant = 2;
-  var arrayofObjects = [];
+const GM = 398600.4418;
+const EARTHRADIUS = 6367.4447;
+const CONSTANT = 2;
 
-  var finalObject = arr.reduce(function(accumulator, next){
+function orbitalPeriod(arr) { 
+  var arrayofObjects = [];
+  var finalObject = arr.reduce(function(accumulator, currentObject){
     var objectSphere = {};
-    objectSphere.name = next.name;
-    objectSphere.orbitalPeriod = Math.round(constant*Math.PI*Math.pow( Math.pow( earthRadius + next.avgAlt , 3 ) / GM , 1/2 ));
+    objectSphere.name = currentObject.name;
+    objectSphere.orbitalPeriod = Math.round(CONSTANT*Math.PI*Math.pow( Math.pow( EARTHRADIUS + currentObject.avgAlt , 3 ) / GM , 1/2 ));
     console.log(objectSphere);
     arrayofObjects.push(objectSphere);
   }, []);
