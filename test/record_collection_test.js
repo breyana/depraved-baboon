@@ -2,7 +2,7 @@ const {updateRecords, collection} = require("../algorithms/record_collection.js"
 // const {collection} = require("../algorithms/record_collection.js")
 const {expect} = require('chai');
 
-describe.only('Record Collection', function() {
+describe('Record Collection', function() {
   describe('Manipulates a record collection with given values',
   function() {
     it('Adds the key "artist" and value "ABBA" to ID 5439', function() {
