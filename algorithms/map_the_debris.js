@@ -19,18 +19,16 @@ const GM = 398600.4418;
 const EARTHRADIUS = 6367.4447;
 const CONSTANT = 2;
 
-function orbitalPeriod(arr) { 
+function orbitalPeriod(arr) {
   var arrayofObjects = [];
   var finalObject = arr.reduce(function(accumulator, currentObject){
     var objectSphere = {};
     objectSphere.name = currentObject.name;
     objectSphere.orbitalPeriod = Math.round(CONSTANT*Math.PI*Math.pow( Math.pow( EARTHRADIUS + currentObject.avgAlt , 3 ) / GM , 1/2 ));
-    console.log(objectSphere);
     arrayofObjects.push(objectSphere);
   }, []);
 
   return arrayofObjects;
 }
 
-orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7},
-{name: "moon", avgAlt: 378632.553}]);
+module.exports = {orbitalPeriod};

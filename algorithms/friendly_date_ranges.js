@@ -85,30 +85,24 @@ function makeFriendlyDates(arr) {
   // created if statements for conditions that remove redundant information
 
     if (year1 === year2 && month1 === month2 && day1 === day2) {
-      console.log(month1 + ' '  + day1 + ', ' + year1);
       return [month1 + " " + day1 + ", " + year1];
 
     } else if (year1 === year2 && month1 === month2) {
-      console.log(month1 + " " + day1 + ", " + day2);
       return [month1 + " " + day1, day2];
 
     } else if (year1 === year2 && month1 !== month2) {
-      console.log(month1 + ' ' + day1 + ', ' + year1 + ', ' + month2 + ' ' + day2);
       return [month1 + ' ' + day1 + ', ' + year1,month2 + ' ' + day2];
 
     } else if (year1 === year2-1 && month1 !== month2) {
-      console.log(month1 + ' ' + day1 + ', ' + month2 + ' ' + day2);
       return [month1 + ' ' + day1,month2 + ' ' + day2];
 
     } else if (year1 !== year2 && month1 === month2 && day1 > day2) {
-      console.log(month1 + ' ' + day1 + ', ' + month2 + ' ' + day2);
       return [month1 + ' ' + day1 + ', ' + year1,month2 + ' ' + day2];
 
     } else {
-      console.log(month1 + ' ' + day1 + ', ' + year1 + ', ' + month2 + ' ' + day2 + ', ' + year2);
       return [month1 + ' ' + day1 + ', ' + year1,month2 + ' ' + day2 + ', ' + year2];
     }
 
 }
 
-makeFriendlyDates(["2017-03-01", "2017-05-05"]);
+module.exports = {makeFriendlyDates};

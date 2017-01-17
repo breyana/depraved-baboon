@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/breyana/depraved-baboon/issues"
   },
-  "homepage": "https://github.com/breyana/depraved-baboon#readme"
+  "homepage": "https://github.com/breyana/depraved-baboon#readme",
+  "directories": {
+    "test": "test"
+  }
 }

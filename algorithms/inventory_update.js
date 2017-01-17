@@ -46,4 +46,4 @@ var newInv = [
     [7, "Toothpaste"]
 ];
 
-updateInventory(curInv, newInv);
+module.exports = {updateInventory};
